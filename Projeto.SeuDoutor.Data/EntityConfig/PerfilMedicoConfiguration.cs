@@ -13,7 +13,24 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
         public PerfilMedicoConfiguration()
         {
             HasKey(p => p.Id);
-           
+
+            Property(p => p.NumeroRegistro)
+                .IsRequired();
+
+            //relationship  1:1
+            HasOptional(u => u.EstadoRegistro)
+                .WithMany()
+                .HasForeignKey(p => p.EstadoRegistroId);
+
+            //relationship  1:1
+            HasOptional(u => u.Conselho)
+                .WithMany()
+                .HasForeignKey(p => p.ConselhoId);
+
+            //relationship  1:1
+            HasOptional(u => u.Agenda)
+                .WithMany()
+                .HasForeignKey(p => p.AgendaId);
         }
     }
 }

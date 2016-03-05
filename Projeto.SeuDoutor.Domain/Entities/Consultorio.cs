@@ -7,67 +7,28 @@ using System.Threading.Tasks;
 namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Consultorio : Entity
-    {
-        private PerfilMedico perfilMedico;
-        private Endereco endereco;
-        private string nome;
-        private readonly ICollection<Foto> fotos;
-        private string telefone01;
-        private string telefone02;
-        private DateTime duracaoConsulta;
-        private readonly ICollection<Convenio> convenios;
-        private ConfiguracaoHorario configuracaoHorario;
+    {                
+        public string Nome { get; set; }        
+        public string Telefone01 { get; set; }
+        public string Telefone02 { get; set; }
+        public DateTime DuracaoConsulta { get; set; }
+
+        // FK
+        public int PerfilMedicoId { get; set; }        
+        public int EnderecoId { get; set; }
+        public int ConfiguracaoHorarioId { get; set; }
+
+        public virtual PerfilMedico PerfilMedico { get; set; }
+        public Endereco Endereco { get; set; }
+        public ConfiguracaoHorario ConfiguracaoHorario { get; set; }        
+        public virtual ICollection<Foto> Fotos { get; set; } PRAEI!!!!!
+        public virtual ICollection<Convenio> Convenios { get; set; }
+        
 
         public Consultorio()
         {
-            this.fotos = new HashSet<Foto>();
-            this.convenios = new HashSet<Convenio>();
-        }
-
-        public PerfilMedico PerfilMedico
-        {
-            get { return perfilMedico; }
-            set { perfilMedico = value; }
-        }
-
-        public Endereco Endereco
-        {
-            get { return endereco; }
-            set { endereco = value; }
-        }
-
-        public virtual string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
-
-        public string Telefone01
-        {
-            get { return telefone01; }
-            set { telefone01 = value; }
-        }
-
-        public virtual string Telefone02
-        {
-            get { return telefone02; }
-            set { telefone02 = value; }
-        }
-
-        public IEnumerable<Foto> Fotos
-        {
-            get { return fotos; }
-        }
-
-        public IEnumerable<Convenio> Convenios
-        {
-            get { return convenios; }
-        }
-
-        public ConfiguracaoHorario ConfiguracaoHorario
-        {
-            get { return configuracaoHorario; }
-            set { configuracaoHorario = value; }
+            this.Fotos = new HashSet<Foto>();
+            this.Convenios = new HashSet<Convenio>();
         }
     }
 }

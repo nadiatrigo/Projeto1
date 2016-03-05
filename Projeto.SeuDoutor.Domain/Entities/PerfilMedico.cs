@@ -9,65 +9,29 @@ namespace Projeto.SeuDoutor.Domain.Entities
     public class PerfilMedico : Entity
     {
         public int NumeroRegistro { get; set; }
-        //private readonly ICollection<Especialidade> especialidades;
-        //private readonly ICollection<Consultorio> consultorios;
-        //private Estado estadoRegistro;
-        //private Conselho conselho;
-        //private Agenda agenda;
-        //private readonly ICollection<Avaliacao> avaliacoes;
-        //public virtual Usuario Usuario { get; set; }
-        //private Plano plano; 
+        public Estado EstadoRegistro { get; set; }
+        public Conselho Conselho { get; set; }
+        public Agenda Agenda { get; set; }
+        //private Plano plano;
+
+        // FK
+        public int EstadoRegistroId { get; set; }
+        public int ConselhoId { get; set; }
+        public int AgendaId { get; set; }
+
+        // Navegation
+        public virtual ICollection<Especialidade> Especialidades { get; set; }
+        public virtual ICollection<Consultorio> Consultorios { get; set; }
+        public virtual ICollection<Avaliacao> Avaliacoes { get; set; }
+
+        
 
         public PerfilMedico()
         {
-            //this.especialidades = new HashSet<Especialidade>();
-            //this.consultorios = new HashSet<Consultorio>();
-            //this.avaliacoes = new HashSet<Avaliacao>();
+            this.Especialidades = new HashSet<Especialidade>();
+            this.Consultorios = new HashSet<Consultorio>();
+            this.Avaliacoes = new HashSet<Avaliacao>();
         }
 
-        //public int NumeroRegistro
-        //{
-        //    get { return numeroRegistro; }
-        //    set { numeroRegistro = value; }
-        //}
-
-        //public IEnumerable<Especialidade> Especialidades
-        //{
-        //    get { return especialidades; }
-        //}
-
-        //public IEnumerable<Consultorio> Consultorios
-        //{
-        //    get { return consultorios; }
-        //}
-
-        //public Estado EstadoRegistro
-        //{
-        //    get { return estadoRegistro; }
-        //    set { estadoRegistro = value; }
-        //}
-
-        //public Conselho Conselho
-        //{
-        //    get { return conselho; }
-        //    set { conselho = value; }
-        //}
-
-        //public Agenda Agenda
-        //{
-        //    get { return agenda; }
-        //    set { agenda = value; }
-        //}
-
-        //public IEnumerable<Avaliacao> Avaliacoes
-        //{
-        //    get { return avaliacoes; }
-        //}
-
-        //public virtual Usuario Usuario
-        //{
-        //    get { return usuario; }
-        //    set { usuario = value; }
-        //}
     }
 }

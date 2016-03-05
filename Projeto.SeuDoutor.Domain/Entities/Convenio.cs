@@ -10,10 +10,20 @@ namespace Projeto.SeuDoutor.Domain.Entities
     {
         private string nome;
 
+        // FK
+        private int usuarioID;
+
+
         public string Nome
         {
             get { return nome; }
             set { nome = value; }
+        }
+
+        public int UsuarioID
+        {
+            get { return usuarioID; }
+            set { usuarioID = value; }
         }
     }
 }

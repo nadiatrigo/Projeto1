@@ -8,45 +8,19 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Avaliacao : Entity
     {
-        private int pontuacao;
-        private string comentario;
-        private PerfilMedico medico;
-        private Consultorio consultorio;
-        private Usuario usuario;
+        public int Pontuacao { get; set; }
+        public string Comentario { get; set; }
+
+        public int? PerfilMedicoID { get; set; }
+        public PerfilMedico PerfilMedico { get; set; }
+
+        public Consultorio Consultorio { get; set; }
+        public Usuario Usuario { get; set; }
 
         public Avaliacao()
         {
 
         }
 
-        public int Pontuacao
-        {
-            get { return pontuacao; }
-            set { pontuacao = value; }
-        }
-
-        public string Comentario
-        {
-            get { return comentario; }
-            set { comentario = value; }
-        }
-
-        public PerfilMedico Medico
-        {
-            get { return medico; }
-            set { medico = value; }
-        }
-
-        public Consultorio Consultorio
-        {
-            get { return consultorio; }
-            set { consultorio = value; }
-        }
-
-        public Usuario Usuario
-        {
-            get { return usuario; }
-            set { usuario = value; }
-        }
     }
 }

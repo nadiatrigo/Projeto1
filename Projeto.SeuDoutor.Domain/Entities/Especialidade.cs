@@ -8,12 +8,15 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Especialidade : Entity
     {
-        private string nome;
+        public string Nome { get; set; }
 
-        public string Nome
+        public int PerfilMedicoID { get; set; }
+        public virtual PerfilMedico PerfilMedico { get; set; }
+
+        public Especialidade()
         {
-            get { return nome; }
-            set { nome = value; }
+
         }
+
     }
 }

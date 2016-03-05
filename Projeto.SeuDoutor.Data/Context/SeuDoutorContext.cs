@@ -20,6 +20,8 @@ namespace Projeto.SeuDoutor.Data.Context
 
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<PerfilMedico> PerfilMedico { get; set; }
+        public DbSet<Consulta> Consulta { get; set; }
+        public DbSet<Convenio> Convenio { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {            
@@ -29,6 +31,8 @@ namespace Projeto.SeuDoutor.Data.Context
 
             modelBuilder.Configurations.Add(new UsuarioConfiguration());
             modelBuilder.Configurations.Add(new PerfilMedicoConfiguration());
+            modelBuilder.Configurations.Add(new ConsultaConfiguration());
+            modelBuilder.Configurations.Add(new ConvenioConfiguration());
         }
     }
 }
