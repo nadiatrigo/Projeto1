@@ -13,6 +13,12 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
         public ConvenioConfiguration()
         {
             HasKey(c => c.Id);
+
+            //relationship  1:*
+            HasRequired(c => c.Consultorio)
+                .WithMany(co => co.Convenios)
+                .HasForeignKey(c => c.ConsultorioId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

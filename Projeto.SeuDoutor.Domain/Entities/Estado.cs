@@ -8,30 +8,14 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Estado : Entity
     {
-        private string sigla;
-        private string nome;
-        private readonly ICollection<Municipio> municipios;
+        public string Sigla { get; set; }
+        public string Nome { get; set; }
+        public virtual ICollection<Municipio> Municipios { get; set; }
 
         public Estado()
         {
-            this.municipios = new HashSet<Municipio>();
+            this.Municipios = new HashSet<Municipio>();
         }
 
-        public string Sigla
-        {
-            get { return sigla; }
-            set { sigla = value; }
-        }
-
-        public string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
-
-        public IEnumerable<Municipio> Municipios
-        {
-            get { return municipios; }
-        }
     }
 }

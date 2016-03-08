@@ -8,13 +8,7 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Entity
     {
-        private int id;
-
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+        public int Id;
 
         public override bool Equals(object obj)
         {

@@ -38,6 +38,13 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
             HasRequired(c => c.ConfiguracaoHorario)
                 .WithMany()
                 .HasForeignKey(c => c.ConfiguracaoHorarioId);
+
+            //relationship 1:1
+            HasRequired(c => c.Endereco)
+                .WithMany()
+                .HasForeignKey(c => c.EnderecoId);
+
+
         }
     }
 }

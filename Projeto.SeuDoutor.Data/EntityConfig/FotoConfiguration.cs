@@ -8,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace Projeto.SeuDoutor.Data.EntityConfig
 {
-    public class AvaliacaoConfiguration : EntityTypeConfiguration<Avaliacao>
+    public class FotoConfiguration : EntityTypeConfiguration<Foto>
     {
-        public AvaliacaoConfiguration()
+        public FotoConfiguration()
         {
-            HasKey(a => a.Id);
+            HasKey(f => f.Id);
 
-            HasOptional(p => p.PerfilMedico)
-                .WithMany(a => a.Avaliacoes)
-                .HasForeignKey(p => p.PerfilMedicoID)
+            //relationship  1:*
+            HasRequired(f => f.Consultorio)
+                .WithMany(c => c.Fotos)
+                .HasForeignKey(u => u.ConsultorioId)
                 .WillCascadeOnDelete(false);
         }
     }

@@ -8,19 +8,15 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Foto : Entity
     {
-        private Guid nomeArquivo;
-        private Consultorio consultorio;
+        public Guid NomeArquivo { get; set; }
+        public virtual Consultorio Consultorio { get; set; }
 
-        public Guid NomeArquivo
-        {
-            get { return nomeArquivo; }
-            set { nomeArquivo = value; }
-        }
+        // FK
+        public int ConsultorioId { get; set; }
 
-        public Consultorio Consultorio
+        public Foto()
         {
-            get { return consultorio; }
-            set { consultorio = value; }
+                
         }
     }
 }

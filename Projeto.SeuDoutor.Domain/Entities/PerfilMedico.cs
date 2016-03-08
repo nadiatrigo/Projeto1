@@ -9,9 +9,9 @@ namespace Projeto.SeuDoutor.Domain.Entities
     public class PerfilMedico : Entity
     {
         public int NumeroRegistro { get; set; }
-        public Estado EstadoRegistro { get; set; }
-        public Conselho Conselho { get; set; }
-        public Agenda Agenda { get; set; }
+        public virtual Estado EstadoRegistro { get; set; }
+        public virtual Conselho Conselho { get; set; }
+        public virtual Agenda Agenda { get; set; }
         //private Plano plano;
 
         // FK
@@ -21,16 +21,12 @@ namespace Projeto.SeuDoutor.Domain.Entities
 
         // Navegation
         public virtual ICollection<Especialidade> Especialidades { get; set; }
-        public virtual ICollection<Consultorio> Consultorios { get; set; }
-        public virtual ICollection<Avaliacao> Avaliacoes { get; set; }
-
-        
+        public virtual ICollection<Consultorio> Consultorios { get; set; }        
 
         public PerfilMedico()
         {
             this.Especialidades = new HashSet<Especialidade>();
             this.Consultorios = new HashSet<Consultorio>();
-            this.Avaliacoes = new HashSet<Avaliacao>();
         }
 
     }

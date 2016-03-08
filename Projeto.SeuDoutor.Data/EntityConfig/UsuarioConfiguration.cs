@@ -57,12 +57,12 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
             //relationship  1:1
             HasOptional(u => u.PerfilMedico)
                 .WithMany()
-                .HasForeignKey(p => p.PerfilMedicoID);
+                .HasForeignKey(p => p.PerfilMedicoId);
 
             //relationship  1:1
             HasRequired(u => u.Convenio)
                 .WithMany()
-                .HasForeignKey(c => c.ConvenioID);
+                .HasForeignKey(c => c.ConvenioId);
 
         }
     }

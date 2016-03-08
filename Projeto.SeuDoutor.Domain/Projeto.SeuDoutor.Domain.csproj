@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Agenda.cs" />
-    <Compile Include="Entities\Avaliacao.cs" />
     <Compile Include="Entities\ConfiguracaoHorario.cs" />
     <Compile Include="Entities\Conselho.cs" />
     <Compile Include="Entities\Consulta.cs" />
@@ -55,6 +54,10 @@
     <Compile Include="Entities\Intervalo.cs" />
     <Compile Include="Entities\Municipio.cs" />
     <Compile Include="Entities\PerfilMedico.cs" />
+    <Compile Include="Entities\Pergunta.cs" />
+    <Compile Include="Entities\Questionario.cs" />
+    <Compile Include="Entities\RespostaQuestionario.cs" />
+    <Compile Include="Entities\RespostaQuestionarioAvaliado.cs" />
     <Compile Include="Entities\Sexo.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

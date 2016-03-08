@@ -19,16 +19,18 @@ namespace Projeto.SeuDoutor.Domain.Entities
         public int ConfiguracaoHorarioId { get; set; }
 
         public virtual PerfilMedico PerfilMedico { get; set; }
-        public Endereco Endereco { get; set; }
-        public ConfiguracaoHorario ConfiguracaoHorario { get; set; }        
-        public virtual ICollection<Foto> Fotos { get; set; } PRAEI!!!!!
+        public virtual Endereco Endereco { get; set; }
+        public virtual ConfiguracaoHorario ConfiguracaoHorario { get; set; }        
+        public virtual ICollection<Foto> Fotos { get; set; }
         public virtual ICollection<Convenio> Convenios { get; set; }
-        
+        public virtual ICollection<Consulta> Consultas { get; set; }
+
 
         public Consultorio()
         {
             this.Fotos = new HashSet<Foto>();
             this.Convenios = new HashSet<Convenio>();
+            this.Consultas = new HashSet<Consulta>();
         }
     }
 }

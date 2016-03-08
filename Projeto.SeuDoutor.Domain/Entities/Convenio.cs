@@ -8,22 +8,16 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Convenio : Entity
     {
-        private string nome;
+        public string Nome { get; set; }
 
         // FK
-        private int usuarioID;
+        public int UsuarioId { get; set; }
+        public int ConsultorioId { get; set; }
+        public virtual Consultorio Consultorio { get; set; }
 
-
-        public string Nome
+        public Convenio()
         {
-            get { return nome; }
-            set { nome = value; }
-        }
 
-        public int UsuarioID
-        {
-            get { return usuarioID; }
-            set { usuarioID = value; }
         }
     }
 }

@@ -14,11 +14,19 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
         {
             HasKey(c => c.Id);
 
+            Property(c => c.DataMarcada);            
+
             //relationship  1:*
             HasRequired(u => u.Usuario)
                 .WithMany(c => c.Consultas)
                 .HasForeignKey(u => u.UsuarioId)
-                .WillCascadeOnDelete(false);                   
+                .WillCascadeOnDelete(false);
+
+            //relationship  1:*
+            HasRequired(c => c.Consultorio)
+                .WithMany(co => co.Consultas)
+                .HasForeignKey(c => c.ConsultorioId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

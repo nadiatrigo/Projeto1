@@ -8,37 +8,18 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class ConfiguracaoHorario : Entity
     {
-        private DateTime horaInicio;
-        private DateTime horaFim;
-        private readonly ICollection<Intervalo> intervalos;
-        private Consultorio consultorio;
+        public DateTime HoraInicio { get; set; }
+        public DateTime HoraFim { get; set; }
+        public virtual ICollection<Intervalo> Intervalos { get; set; }
+        public virtual Consultorio Consultorio { get; set; }
+
+        // FK
+        public int? ConsultorioId { get; set; }
 
         public ConfiguracaoHorario()
         {
-            this.intervalos = new HashSet<Intervalo>();
+            this.Intervalos = new HashSet<Intervalo>();
         }
 
-        public DateTime HoraInicio
-        {
-            get { return horaInicio; }
-            set { horaInicio = value; }
-        }
-
-        public DateTime HoraFim
-        {
-            get { return horaFim; }
-            set { horaFim = value; }
-        }
-
-        public IEnumerable<Intervalo> Intervalos
-        {
-            get { return intervalos; }
-        }
-
-        public Consultorio Consultorio
-        {
-            get { return consultorio; }
-            set { consultorio = value; }
-        }
     }
 }

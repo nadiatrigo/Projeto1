@@ -8,19 +8,15 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Municipio : Entity
     {
-        private string nome;
-        private Estado estado;
+        public string Nome { get; set; }
+        public virtual Estado Estado { get; set; }
 
-        public virtual string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
+        // FK
+        public int EstadoId { get; set; }
 
-        public virtual Estado Estado
+        public Municipio()
         {
-            get { return estado; }
-            set { estado = value; }
+
         }
     }
 }

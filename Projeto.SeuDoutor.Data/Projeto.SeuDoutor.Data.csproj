@@ -52,12 +52,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\SeuDoutorContext.cs" />
-    <Compile Include="EntityConfig\AvaliacaoConfiguration.cs" />
+    <Compile Include="EntityConfig\ConfiguracaoHorarioConfiguration.cs" />
+    <Compile Include="EntityConfig\ConselhoConfiguration.cs" />
     <Compile Include="EntityConfig\ConsultaConfiguration.cs" />
     <Compile Include="EntityConfig\ConsultorioConfiguration.cs" />
     <Compile Include="EntityConfig\ConvenioConfiguration.cs" />
+    <Compile Include="EntityConfig\EnderecoConfiguration.cs" />
     <Compile Include="EntityConfig\EspecialidadeConfiguration.cs" />
+    <Compile Include="EntityConfig\EstadoConfiguration.cs" />
+    <Compile Include="EntityConfig\FotoConfiguration.cs" />
+    <Compile Include="EntityConfig\IntervaloConfiguration.cs" />
+    <Compile Include="EntityConfig\MunicipioConfiguration.cs" />
     <Compile Include="EntityConfig\PerfilMedicoConfiguration.cs" />
+    <Compile Include="EntityConfig\PerguntaConfiguration.cs" />
+    <Compile Include="EntityConfig\QuestionarioConfiguration.cs" />
+    <Compile Include="EntityConfig\RespostaQuestionarioAvaliadoConfiguration.cs" />
+    <Compile Include="EntityConfig\RespostaQuestionarioConfiguration.cs" />
     <Compile Include="EntityConfig\UsuarioConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\MySqlHistoryContext.cs" />

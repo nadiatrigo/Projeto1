@@ -23,13 +23,15 @@ namespace Projeto.SeuDoutor.Domain.Entities
         public string Telefone { get; set; }
 
         // Foreign key 
-        public int ConvenioID { get; set; }
-        public int? PerfilMedicoID { get; set; }
+        public int ConvenioId { get; set; }
+        public int? PerfilMedicoId { get; set; }
 
         // Navegation
-        public Convenio Convenio { get; set; }                        
-        public PerfilMedico PerfilMedico { get; set; }
-        public ICollection<Consulta> Consultas { get; set; }
+        public virtual Convenio Convenio { get; set; }                        
+        public virtual PerfilMedico PerfilMedico { get; set; }
+        public virtual ICollection<Consulta> Consultas { get; set; }
+        public virtual ICollection<RespostaQuestionario> RespostasQuestionario { get; set; }
+
 
         public Usuario()
         {
@@ -38,6 +40,8 @@ namespace Projeto.SeuDoutor.Domain.Entities
             this.Ativo = false;
             this.Medico = false;
             this.Consultas = new HashSet<Consulta>();
+            this.RespostasQuestionario = new HashSet<RespostaQuestionario>();
+
         }
     }
 }

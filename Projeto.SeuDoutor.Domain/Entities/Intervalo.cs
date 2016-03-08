@@ -8,19 +8,16 @@ namespace Projeto.SeuDoutor.Domain.Entities
 {
     public class Intervalo : Entity
     {
-        private DateTime horaInicio;
-        private DateTime horaFim;
+        public DateTime HoraInicio;
+        public DateTime HoraFim;
+        public virtual ConfiguracaoHorario ConfiguracaoHorario { get; set; }
 
-        public DateTime HoraInicio
-        {
-            get { return horaInicio; }
-            set { horaInicio = value; }
-        }
+        // FK
+        public int ConfiguracaoHorarioId { get; set; }
 
-        public DateTime HoraFim
+        public Intervalo()
         {
-            get { return horaFim; }
-            set { horaFim = value; }
+
         }
     }
 }
