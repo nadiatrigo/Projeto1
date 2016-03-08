@@ -18,19 +18,19 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
                 .IsRequired();
 
             //relationship  1:1
-            HasOptional(u => u.EstadoRegistro)
+            HasRequired(p => p.EstadoRegistro)
                 .WithMany()
                 .HasForeignKey(p => p.EstadoRegistroId);
 
             //relationship  1:1
-            HasOptional(u => u.Conselho)
+            HasRequired(p => p.Conselho)
                 .WithMany()
                 .HasForeignKey(p => p.ConselhoId);
 
-            //relationship  1:1
-            HasOptional(u => u.Agenda)
-                .WithMany()
-                .HasForeignKey(p => p.AgendaId);
+            ////relationship  1:1
+            //HasOptional(p => p.Agenda)
+            //    .WithMany()
+            //    .HasForeignKey(p => p.AgendaId);
         }
     }
 }

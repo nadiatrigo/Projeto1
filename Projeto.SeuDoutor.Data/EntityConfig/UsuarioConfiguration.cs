@@ -14,7 +14,7 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
     {
         public UsuarioConfiguration()
         {
-            
+
             HasKey(u => u.Id);
 
             Property(u => u.Email)

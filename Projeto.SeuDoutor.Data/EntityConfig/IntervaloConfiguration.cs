@@ -19,8 +19,8 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
             Property(i => i.HoraFim);
 
             //relationship  1:*
-            HasOptional(ch => ch.ConfiguracaoHorario)
-                .WithMany(i  => i.Intervalos)
+            HasRequired(ch => ch.ConfiguracaoHorario)
+                .WithMany(i => i.Intervalos)
                 .HasForeignKey(ch => ch.ConfiguracaoHorarioId)
                 .WillCascadeOnDelete(false);
         }

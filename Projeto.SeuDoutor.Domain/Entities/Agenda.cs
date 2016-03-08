@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace Projeto.SeuDoutor.Domain.Entities
-{
-    public class Agenda : Entity
-    {
+//namespace Projeto.SeuDoutor.Domain.Entities
+//{
+//    public class Agenda : Entity
+//    {
 
-    }
-}
+//    }
+//}

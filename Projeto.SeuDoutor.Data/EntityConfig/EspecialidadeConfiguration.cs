@@ -15,9 +15,9 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
             HasKey(e => e.Id);
 
             //relationship  1:*
-            HasRequired(e => e.PerfilMedico)
-                .WithMany(p => p.Especialidades)
-                .HasForeignKey(e => e.PerfilMedicoID)
+            HasRequired(p => p.PerfilMedico)
+                .WithMany(e => e.Especialidades)
+                .HasForeignKey(p => p.PerfilMedicoID)
                 .WillCascadeOnDelete(false);
         }
     }

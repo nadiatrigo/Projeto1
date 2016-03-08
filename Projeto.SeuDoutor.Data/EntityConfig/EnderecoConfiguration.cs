@@ -31,7 +31,7 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
             Property(e => e.Longitude);
 
             Property(e => e.Numero);
-            
+
             //relationship 1:1
             HasRequired(e => e.Estado)
                 .WithMany()

@@ -16,7 +16,7 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
 
             Property(m => m.Nome)
                 .HasColumnType("varchar")
-                .HasMaxLength(100);            
+                .HasMaxLength(100);
 
             //relationship  1:*
             HasRequired(m => m.Estado)

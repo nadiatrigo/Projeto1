@@ -15,9 +15,9 @@ namespace Projeto.SeuDoutor.Data.EntityConfig
             HasKey(f => f.Id);
 
             //relationship  1:*
-            HasRequired(f => f.Consultorio)
-                .WithMany(c => c.Fotos)
-                .HasForeignKey(u => u.ConsultorioId)
+            HasRequired(c => c.Consultorio)
+                .WithMany(f => f.Fotos)
+                .HasForeignKey(c => c.ConsultorioId)
                 .WillCascadeOnDelete(false);
         }
     }

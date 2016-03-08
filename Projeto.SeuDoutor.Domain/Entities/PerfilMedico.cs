@@ -11,7 +11,7 @@ namespace Projeto.SeuDoutor.Domain.Entities
         public int NumeroRegistro { get; set; }
         public virtual Estado EstadoRegistro { get; set; }
         public virtual Conselho Conselho { get; set; }
-        public virtual Agenda Agenda { get; set; }
+        //public virtual Agenda Agenda { get; set; }
         //private Plano plano;
 
         // FK
