@@ -60,10 +60,27 @@
     <Compile Include="Entities\RespostaQuestionarioAvaliado.cs" />
     <Compile Include="Entities\Sexo.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Interfaces\IRepositorioBase.cs" />
+    <Compile Include="Interfaces\IRepositorioConselho.cs" />
+    <Compile Include="Interfaces\IRepositorioConsulta.cs" />
+    <Compile Include="Interfaces\IRepositorioConsultorio.cs" />
+    <Compile Include="Interfaces\IRepositorioConfiguracaoHorario.cs" />
+    <Compile Include="Interfaces\IRepositorioConvenio.cs" />
+    <Compile Include="Interfaces\IRepositorioEndereco.cs" />
+    <Compile Include="Interfaces\IRepositorioEspecialidade.cs" />
+    <Compile Include="Interfaces\IRepositorioEstado.cs" />
+    <Compile Include="Interfaces\IRepositorioFoto.cs" />
+    <Compile Include="Interfaces\IRepositorioIntervalo.cs" />
+    <Compile Include="Interfaces\IRepositorioMunicipio.cs" />
+    <Compile Include="Interfaces\IRepositorioPerfilMedico.cs" />
+    <Compile Include="Interfaces\IRepositorioPergunta.cs" />
+    <Compile Include="Interfaces\IRepositorioQuestionario.cs" />
+    <Compile Include="Interfaces\IRepositorioRespostaQuestionario.cs" />
+    <Compile Include="Interfaces\IRepositorioRespostaQuestionarioAvaliado.cs" />
+    <Compile Include="Interfaces\IRepositorioUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

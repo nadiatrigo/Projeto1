@@ -72,10 +72,26 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\MySqlHistoryContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\RepositorioBase.cs" />
+    <Compile Include="Repositories\RepositorioConfiguracaoHorario.cs" />
+    <Compile Include="Repositories\RepositorioConselho.cs" />
+    <Compile Include="Repositories\RepositorioConsulta.cs" />
+    <Compile Include="Repositories\RepositorioConsultorio.cs" />
+    <Compile Include="Repositories\RepositorioConvenio.cs" />
+    <Compile Include="Repositories\RepositorioEndereco.cs" />
+    <Compile Include="Repositories\RepositorioEspecialidade.cs" />
+    <Compile Include="Repositories\RepositorioEstado.cs" />
+    <Compile Include="Repositories\RepositorioFoto.cs" />
+    <Compile Include="Repositories\RepositorioIntervalo.cs" />
+    <Compile Include="Repositories\RepositorioMunicipio.cs" />
+    <Compile Include="Repositories\RepositorioPerfilMedico.cs" />
+    <Compile Include="Repositories\RepositorioPergunta.cs" />
+    <Compile Include="Repositories\RepositorioQuestionario.cs" />
+    <Compile Include="Repositories\RepositorioRespostaQuestionario.cs" />
+    <Compile Include="Repositories\RepositorioRespostaQuestionarioAvaliado.cs" />
+    <Compile Include="Repositories\RepositorioUsuario.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
