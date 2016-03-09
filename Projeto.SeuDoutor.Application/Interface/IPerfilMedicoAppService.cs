@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto.SeuDoutor.Domain.Interfaces
+namespace Projeto.SeuDoutor.Application.Interface
 {
-    public interface IRepositorioPergunta : IRepositorioBase<Pergunta>
+    public interface IPerfilMedicoAppService : IAppServiceBase<PerfilMedico>
     {
-
     }
 }

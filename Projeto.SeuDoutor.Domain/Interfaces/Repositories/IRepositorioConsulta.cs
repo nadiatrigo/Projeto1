@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto.SeuDoutor.Domain.Interfaces
+namespace Projeto.SeuDoutor.Domain.Interfaces.Repositories
 {
-    public interface IRepositorioEstado : IRepositorioBase<Estado>
+    public interface IRepositorioConsulta : IRepositorioBase<Consulta>
     {
     }
 }

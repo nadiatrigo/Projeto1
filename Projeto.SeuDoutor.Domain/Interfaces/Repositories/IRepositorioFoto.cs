@@ -1,14 +1,13 @@
 ﻿using Projeto.SeuDoutor.Domain.Entities;
-using Projeto.SeuDoutor.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto.SeuDoutor.Data.Repositories
+namespace Projeto.SeuDoutor.Domain.Interfaces.Repositories
 {
-    public class RepositorioFoto : RepositorioBase<Foto>, IRepositorioFoto
+    public interface IRepositorioFoto : IRepositorioBase<Foto>
     {
     }
 }

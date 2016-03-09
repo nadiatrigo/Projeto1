@@ -1,5 +1,5 @@
 ﻿using Projeto.SeuDoutor.Domain.Entities;
-using Projeto.SeuDoutor.Domain.Interfaces;
+using Projeto.SeuDoutor.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projeto.SeuDoutor.Data.Repositories
 {
-    public class RepositorioEndereco : RepositorioBase<Endereco>, IRepositorioEstado
+    public class RepositorioEndereco : RepositorioBase<Endereco>, IRepositorioEndereco
     {
     }
 }

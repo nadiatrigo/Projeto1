@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto.SeuDoutor.Domain.Interfaces
+namespace Projeto.SeuDoutor.Domain.Interfaces.Services
 {
-    public interface IRepositorioIntervalo : IRepositorioBase<Intervalo>
+    public interface IPerfilMedicoService : IServiceBase<PerfilMedico>
     {
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto.SeuDoutor.Domain.Interfaces
+namespace Projeto.SeuDoutor.Domain.Interfaces.Repositories
 {
     public interface IRepositorioUsuario : IRepositorioBase<Usuario>
     {

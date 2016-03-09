@@ -1,5 +1,5 @@
 ﻿using Projeto.SeuDoutor.Data.Context;
-using Projeto.SeuDoutor.Domain.Interfaces;
+using Projeto.SeuDoutor.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

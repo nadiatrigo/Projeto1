@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto.SeuDoutor.Domain.Interfaces
+namespace Projeto.SeuDoutor.Application.Interface
 {
-    public interface IRepositorioFoto : IRepositorioBase<Foto>
+    public interface IUsuarioAppService : IAppServiceBase<Usuario>
     {
     }
 }
